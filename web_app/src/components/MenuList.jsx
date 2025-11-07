@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import api from "../api";
-import { Utensils, Calendar, ShoppingCart } from "lucide-react";
 
 export default function MenuList() {
     const [menus, setMenus] = useState([]);
