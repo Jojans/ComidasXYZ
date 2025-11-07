@@ -43,6 +43,7 @@ class ProductoSimple(BaseModel):
 class MenuResponse(MenuBase):
     id_menu: int
     productos: list[ProductoSimple] = []
+    total: float | None = None
 
     class Config:
         from_attributes = True

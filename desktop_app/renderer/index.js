@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   const form = document.getElementById("facturaForm");
   const respuestaDiv = document.getElementById("respuesta");
 
-  // Cargar menús desde la API
   try {
     const res = await fetch(`${API_URL}/menus`);
     const menus = await res.json();
