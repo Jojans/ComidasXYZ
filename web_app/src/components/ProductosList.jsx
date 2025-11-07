@@ -14,7 +14,7 @@ export default function ProductosList() {
     nombre: "",
     descripcion: "",
     costo_sin_iva: "",
-    porcentaje_iva: "",
+    tiempo_preparacion: "",
   });
 
   const fetchProductos = async () => {
@@ -51,7 +51,7 @@ export default function ProductosList() {
         nombre: "",
         descripcion: "",
         costo_sin_iva: "",
-        porcentaje_iva: "",
+        tiempo_preparacion: "",
       });
       setSelected(null);
       fetchProductos();
@@ -113,19 +113,19 @@ export default function ProductosList() {
           />
           <input
             type="number"
-            name="costo_sin_iva"
-            value={formData.costo_sin_iva}
+            name="tiempo_preparacion"
+            value={formData.tiempo_preparacion}
             onChange={handleChange}
-            placeholder="Costo sin IVA"
+            placeholder="Tiempo de Preparación (min)"
             className="p-2 border rounded-md"
             required
           />
           <input
             type="number"
-            name="porcentaje_iva"
-            value={formData.porcentaje_iva}
+            name="costo_sin_iva"
+            value={formData.costo_sin_iva}
             onChange={handleChange}
-            placeholder="% IVA"
+            placeholder="Costo sin IVA"
             className="p-2 border rounded-md"
             required
           />
@@ -146,7 +146,7 @@ export default function ProductosList() {
                   nombre: "",
                   descripcion: "",
                   costo_sin_iva: "",
-                  porcentaje_iva: "",
+                  tiempo_preparacion: "",
                 });
               }}
               className="bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600 transition"
@@ -166,6 +166,8 @@ export default function ProductosList() {
           >
             <h3 className="font-bold text-lg mb-1">{p.nombre}</h3>
             <p className="text-gray-600 mb-2">{p.descripcion}</p>
+            <p className="text-sm text-gray-500">Tiempo de preparación: {p.tiempo_preparacion} min</p>
+
             
             <p className="font-semibold mt-2">
               Total: ${(p.costo_sin_iva * (1 + p.porcentaje_iva / 100)).toFixed(2)}
@@ -186,7 +188,7 @@ export default function ProductosList() {
             </div>
           </div>
         ))}
-      </div>
+       </div>
     </div>
   );
 }
