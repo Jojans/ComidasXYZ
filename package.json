@@ -1,0 +1,12 @@
+{
+  "name": "software",
+  "scripts": {
+    "start:api": "cd backend && python -m uvicorn main:app --reload",
+    "start:web": "cd web_app && npm run dev",
+    "start:desktop": "cd desktop_app && npm run start",
+    "start:all": "concurrently \"npm run start:api\" \"npm run start:web\" \"npm run start:desktop\" "
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
