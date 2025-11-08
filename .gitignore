@@ -1,0 +1,10 @@
+node_modules/
+dist/
+build/
+.cache/
+*.log
+*.exe
+
+desktop_app/node_modules/
+desktop_app/dist/
+desktop_app/out/
