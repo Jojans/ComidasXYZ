@@ -45,3 +45,73 @@ button {
 button:hover {
   background-color: #1a4f88;
 }
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.menuItem label {
+  white-space: nowrap;
+}
+
+.menuItem select {
+  flex: 1;
+  min-width: 200px;
+}
+
+.menuItem input[type="number"] {
+  width: 80px;
+}
+
+.productoItem{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.productoItem label {
+  white-space: nowrap;
+}
+
+.productoItem select {
+  flex: 1;
+  min-width: 200px;
+}
+
+.productoItem input[type="number"] {
+  width: 80px;
+}
+
+h2 {
+  margin-top: 30px;
+  color: #2b6cb0;
+}
+
+.factura-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+  background: #f9fafb;
+}
+
+.factura-item button {
+  margin-right: 6px;
+  margin-top: 6px;
+  background-color: #2b6cb0;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.factura-item button:hover {
+  background-color: #1a4f88;
+}
